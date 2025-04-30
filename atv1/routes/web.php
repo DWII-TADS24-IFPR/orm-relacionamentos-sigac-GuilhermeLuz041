@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NivelController;
 
-Route::get('/new', function () {
+Route::get('/', function () {
     return View('welcome');
 })->name('home');
 
