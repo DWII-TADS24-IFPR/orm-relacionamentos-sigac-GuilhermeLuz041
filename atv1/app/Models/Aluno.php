@@ -10,7 +10,12 @@ class Aluno extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['nome', 'cpf', 'email', 'senha', 'curso_id', 'turma_id'];
+    protected $fillable = ['nome', 'cpf', 'email', 'senha', 'users_id', 'curso_id', 'turma_id'];
+
+    public function users()
+    {
+        return $this->belongsTo(Users::class);
+    }
 
     public function curso()
     {
