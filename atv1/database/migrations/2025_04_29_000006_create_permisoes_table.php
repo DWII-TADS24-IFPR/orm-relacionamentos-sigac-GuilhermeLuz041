@@ -16,9 +16,11 @@ return new class extends Migration
             
             $table->unsignedBigInteger('roles_id');
             $table->foreign('roles_id')->references('id')->on('roles')->onDelete('cascade');
-
+            
             $table->unsignedBigInteger('resources_id');
             $table->foreign('resources_id')->references('id')->on('resources')->onDelete('cascade');
+            
+            $table->boolean('permission');
 
             $table->timestamps();
         });

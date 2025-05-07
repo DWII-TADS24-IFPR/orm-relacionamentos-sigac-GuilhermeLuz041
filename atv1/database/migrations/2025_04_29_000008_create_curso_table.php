@@ -20,6 +20,9 @@ return new class extends Migration
             $table->unsignedBigInteger('nivel_id'); 
             $table->foreign('nivel_id')->references('id')->on('nível')->onDelete('cascade');
             
+            $table->unsignedBigInteger('eixo_id'); 
+            $table->foreign('eixo_id')->references('id')->on('eixo')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

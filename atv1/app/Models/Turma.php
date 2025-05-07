@@ -9,10 +9,6 @@ class Turma extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['ano', 'curso_id', 'aluno_id'];
-
-    public function alunos(){
-        return $this->hasMany(Aluno::class);
-    }
+    protected $fillable = ['ano', 'curso_id'];
 
 }

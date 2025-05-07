@@ -9,7 +9,7 @@ class Documento extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['url', 'descricao', 'horas_in', 'status', 'comentario', 'horas_out', 'categoria_id'];
+    protected $fillable = ['url', 'descricao', 'horas_in', 'status', 'comentario', 'horas_out', 'categoria_id','user_id'];
 
     public function aluno(){
         return $this->belongsTo(Aluno::class);

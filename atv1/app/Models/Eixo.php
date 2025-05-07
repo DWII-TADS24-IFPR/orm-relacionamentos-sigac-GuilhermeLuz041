@@ -4,9 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class permisoes extends Model
+class eixo extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['role_id', 'resource_id','permission'];
+    protected $fillable = ['nome'];
+
 }

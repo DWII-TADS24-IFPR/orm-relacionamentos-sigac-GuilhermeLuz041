@@ -10,7 +10,7 @@ class Curso extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['nome', 'sigla', 'total_horas', 'nivel_id'];
+    protected $fillable = ['nome', 'sigla', 'total_horas', 'nivel_id','eixo_id'];
 
     public function alunos(){
         return $this->hasMany(Aluno::class);
